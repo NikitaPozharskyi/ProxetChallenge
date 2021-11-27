@@ -10,6 +10,6 @@ namespace ProxNetChallenge.Repository.Interfaces
     public interface ILobbyPlayerRepository : IRepository<LobbyPlayerEntity, Guid>
     {
         Task<(List<LobbyPlayerEntity>, List<LobbyPlayerEntity>)> GetTeams();
-
+        Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending();
     }
 }

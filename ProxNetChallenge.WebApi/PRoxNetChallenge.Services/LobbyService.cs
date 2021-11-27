@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProxNetChallenge.Entities;
+using ProxNetChallenge.Entities.models;
 using ProxNetChallenge.Repository.Interfaces;
 using ProxNetChallenge.Services.Interfaces;
 
@@ -52,7 +53,49 @@ namespace ProxNetChallenge.Services
 
         public async Task<(List<LobbyPlayerEntity>, List<LobbyPlayerEntity>)> GenerateTeams()
         {
-            return await _lobbyPlayerRepository.GetTeams();
+            var firstTeam = await GenerateTeam();
+            var secondTeam = await GenerateTeam();
+
+            if (firstTeam == null || secondTeam == null)
+                return (new List<LobbyPlayerEntity>(), new List<LobbyPlayerEntity>());
+
+            await RemoveFromLobby(firstTeam);
+            await RemoveFromLobby(secondTeam);
+
+            return (firstTeam, secondTeam);
+        }
+        private async Task<List<LobbyPlayerEntity>> GenerateTeam()
+        {
+            var lobbyPlayers = new List<LobbyPlayerEntity>();
+            var players = await _lobbyPlayerRepository.GetLobbyPlayersOrderebDyDecending();
+
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.First).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Second).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Third).Take(3));
+
+            if (lobbyPlayers.Count < 9) return null;
+
+            await UpdateLobbyPlayerStatus(lobbyPlayers);
+
+            return lobbyPlayers;
+        }
+        private async Task UpdateLobbyPlayerStatus(List<LobbyPlayerEntity> players)
+        {
+            foreach (var player in players)
+            {
+                player.IsTaken = true;
+                await _lobbyPlayerRepository.UpdateAsync(player);
+            }
+        }
+
+        private async Task RemoveFromLobby(List<LobbyPlayerEntity> players)
+        {
+            foreach (var player in players)
+            {
+                var entity = await _lobbyPlayerRepository.GetByIdAsync(player.Id);
+
+                await _lobbyPlayerRepository.DeleteAsync(entity);
+            }
         }
 
         public async Task<List<PlayerEntity>> MapPlayers(List<LobbyPlayerEntity> players)
