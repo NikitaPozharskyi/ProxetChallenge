@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using ProxNetChallenge.ProjectModels;
 using ProxNetChallenge.Services.Interfaces;
+using ProxNetChallenge.WebModels;
 
 namespace ProxNetChallenge.WebApi.Controllers
 {

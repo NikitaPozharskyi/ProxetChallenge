@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProxNetChallenge.Entities.Interfaces;
-using ProxNetChallenge.Models;
+using ProxNetChallenge.Entities.models;
 
 namespace ProxNetChallenge.Entities
 {
@@ -13,7 +13,6 @@ namespace ProxNetChallenge.Entities
         public Guid PlayerId { get; set; }
         public DateTime IncomeDate { get; set; }
         public Vehicle VehicleType { get; set; }
-
         public bool IsTaken { get; set; } = false;
     }
 }

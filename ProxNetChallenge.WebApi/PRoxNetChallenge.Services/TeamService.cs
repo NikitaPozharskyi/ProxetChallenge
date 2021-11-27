@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ProxNetChallenge.Entities;
-using ProxNetChallenge.Models;
 using ProxNetChallenge.Repository.Interfaces;
 using ProxNetChallenge.Services.Interfaces;
 
@@ -12,43 +12,38 @@ namespace ProxNetChallenge.Services
     public class TeamService : ITeamService
     {
         private readonly IPlayerRepository _playerRepository;
+        private readonly ILobbyPlayerRepository _lobbyPlayerRepository;
 
-        public TeamService(IPlayerRepository playerRepository)
+        public TeamService(IPlayerRepository playerRepository, ILobbyPlayerRepository lobbyPlayerRepository)
         {
             _playerRepository = playerRepository;
+            _lobbyPlayerRepository = lobbyPlayerRepository;
         }
 
         public async Task<(List<PlayerEntity>, List<PlayerEntity>)> GetTeamsToLobby()
         {
-            var firstTeam = await GenerateTeam();
-            var secondTeam = await GenerateTeam();
+            var (firstTeam, secondTeam) = await _lobbyPlayerRepository.GetTeams();
+            var firstTeamMapped = await MapPlayers(firstTeam);
+            var secondTeamMapped = await MapPlayers(firstTeam);
 
-            return (firstTeam, secondTeam);
+            return (firstTeamMapped, secondTeamMapped);
         }
 
-        private async Task<List<PlayerEntity>> GenerateTeam()
+        private async Task<List<PlayerEntity>> MapPlayers(List<LobbyPlayerEntity> lobbyPlayers)
         {
-            var playerEntities = await _playerRepository.GetPlayerListOrderebByDescending();
-            var lobbyPlayers = new List<PlayerEntity>();
-
-            lobbyPlayers.AddRange(playerEntities.Where(player => player.VehicleType == Vehicle.First && player.IsInGame == false).Take(3));
-            lobbyPlayers.AddRange(playerEntities.Where(player => player.VehicleType == Vehicle.Second && player.IsInGame == false).Take(3));
-            lobbyPlayers.AddRange(playerEntities.Where(player => player.VehicleType == Vehicle.Third && player.IsInGame == false).Take(3));
-
-            await UpdatePlayerStatus(lobbyPlayers);
-
-            return lobbyPlayers;
-        }
-
-        private async Task UpdatePlayerStatus(List<PlayerEntity> players)
-        {
-            foreach (var player in players)
+            var playerEntityList = new List<PlayerEntity>();
+            foreach (var lbPlayer in lobbyPlayers)
             {
-                var entity = await _playerRepository.GetByIdAsync(player.Id);
-                entity.IsInGame = !entity.IsInGame;
-
-                await _playerRepository.UpdateAsync(entity);
+                var player = await _playerRepository.Find(player => player.Id == lbPlayer.PlayerId);
+                playerEntityList.Add(new PlayerEntity
+                {
+                    PlayerName = player.PlayerName,
+                    Id = lbPlayer.PlayerId,
+                    VehicleType = lbPlayer.VehicleType
+                });
             }
+
+            return playerEntityList;
         }
     }
 }

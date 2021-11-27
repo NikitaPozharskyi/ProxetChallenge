@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ProxNetChallenge.Models;
+using ProxNetChallenge.Entities.models;
 
 namespace ProxNetChallenge.WebApi.Controllers
 {

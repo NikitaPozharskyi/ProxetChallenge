@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ProxNetChallenge.Models;
+using ProxNetChallenge.Entities.models;
 
 namespace ProxNetChallenge.Entities
 {
@@ -8,6 +8,5 @@ namespace ProxNetChallenge.Entities
     {
         public string PlayerName { get; set; }
         public Vehicle VehicleType { get; set; }
-        public int WaitingTime { get; set; }
     }
 }
