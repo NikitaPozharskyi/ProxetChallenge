@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using ProxNetChallenge.Entities;
 using ProxNetChallenge.Models;
 using ProxNetChallenge.Repository.Interfaces;
 
 namespace ProxNetChallenge.Repository
 {
-    public class LobbyPlayerRepository : Repository<Context, LobbyPlayerEntity, Guid>, ILobbyPlayerRepository 
+    public class LobbyPlayerRepository : Repository<Context, LobbyPlayerEntity, Guid>, ILobbyPlayerRepository
     {
         protected LobbyPlayerRepository(Context dbContext) : base(dbContext)
         {
@@ -17,10 +18,10 @@ namespace ProxNetChallenge.Repository
         private async Task<List<LobbyPlayerEntity>> GenerateTeam()
         {
             var lobbyPlayers = new List<LobbyPlayerEntity>();
-
-            lobbyPlayers.AddRange(DbSet.Where(player => player.VehicleType == Vehicle.First).Take(3));
-            lobbyPlayers.AddRange(DbSet.Where(player => player.VehicleType == Vehicle.Second).Take(3));
-            lobbyPlayers.AddRange(DbSet.Where(player => player.VehicleType == Vehicle.Third).Take(3));
+            var players = await GetLobbyPlayersOrderebDyDecending();
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.First).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Second).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Third).Take(3));
 
             if (lobbyPlayers.Count < 9) return null;
 
@@ -28,6 +29,8 @@ namespace ProxNetChallenge.Repository
 
             return lobbyPlayers;
         }
+
+        private async Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending() => DbSet.OrderByDescending(player => player.IncomeDate).ToList();
 
         private async Task UpdateLobbyPlayerStatus(List<LobbyPlayerEntity> players)
         {
@@ -55,8 +58,10 @@ namespace ProxNetChallenge.Repository
 
             if (firstTeam == null || secondTeam == null)
                 return (new List<LobbyPlayerEntity>(), new List<LobbyPlayerEntity>());
+
             await RemoveFromLobby(firstTeam);
             await RemoveFromLobby(secondTeam);
+
             return (firstTeam, secondTeam);
         }
     }
