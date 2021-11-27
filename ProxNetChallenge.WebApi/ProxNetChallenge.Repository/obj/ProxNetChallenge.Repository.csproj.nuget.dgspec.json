@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj": {}
+    "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj": {
+    "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
         "projectName": "ProxNetChallenge.Entities",
-        "projectPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
+        "projectPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
         "packagesPath": "C:\\Users\\npozharskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\obj\\",
+        "outputPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj": {
+    "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj",
         "projectName": "ProxNetChallenge.Repository",
-        "projectPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj",
+        "projectPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\ProxNetChallenge.Repository.csproj",
         "packagesPath": "C:\\Users\\npozharskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\obj\\",
+        "outputPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj": {
-                "projectPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj"
+              "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj": {
+                "projectPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj"
               }
             }
           }

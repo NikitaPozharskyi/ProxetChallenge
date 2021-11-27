@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9BIM4CtCMYaCr3NEJjGgBAWmbNv9bNM1DNUxtUoFTDo77n0cc+i8MgHX1IiaSHHmbWsIiuhb4oHZoIeueQD3vw==",
+  "dgSpecHash": "oURcTXkvPvPdbsZADNU4C+EMf/ePwEVrXTfEK04ctOFBEbx0Q1y7XK/H3RpqHzW6+wIt0wjvikNtYKluQ80Z4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
+  "projectFilePath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\npozharskyi\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\npozharskyi\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

@@ -22,9 +22,20 @@ namespace ProxNetChallenge.Repository
             lobbyPlayers.AddRange(DbSet.Where(player => player.VehicleType == Vehicle.Second).Take(3));
             lobbyPlayers.AddRange(DbSet.Where(player => player.VehicleType == Vehicle.Third).Take(3));
 
-            await RemoveFromLobby(lobbyPlayers);
+            if (lobbyPlayers.Count < 9) return null;
+
+            await UpdateLobbyPlayerStatus(lobbyPlayers);
 
             return lobbyPlayers;
+        }
+
+        private async Task UpdateLobbyPlayerStatus(List<LobbyPlayerEntity> players)
+        {
+            foreach (var player in players)
+            {
+                player.IsTaken = true;
+                await UpdateAsync(player);
+            }
         }
 
         private async Task RemoveFromLobby(List<LobbyPlayerEntity> players)
@@ -41,6 +52,12 @@ namespace ProxNetChallenge.Repository
         {
             var firstTeam = await GenerateTeam();
             var secondTeam = await GenerateTeam();
+
+            if (firstTeam == null || secondTeam == null)
+                return (new List<LobbyPlayerEntity>(), new List<LobbyPlayerEntity>());
+            await RemoveFromLobby(firstTeam);
+            await RemoveFromLobby(secondTeam);
+            return (firstTeam, secondTeam);
         }
     }
 }

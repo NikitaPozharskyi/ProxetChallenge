@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O07qQCobk35c91CUIcgW5X4il0kYhmuZ+Zey47QGvF7ND9c0mOwsumCW0VOGEbd7eloiQcOuW16ho+yPL4Ej6w==",
+  "dgSpecHash": "2b+Rm7DWhntyWTK/SinQ7g21XD93m708zOyt2q5gmJNLTK5usS2abwqaw0F/Vv59gBXAfb9o3Bw3kt6md1/zZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\PRoxNetChallenge.Services\\ProxNetChallenge.Services.csproj",
+  "projectFilePath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\PRoxNetChallenge.Services\\ProxNetChallenge.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\npozharskyi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\npozharskyi\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -5923,11 +5923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
+      "projectUniqueName": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
       "projectName": "ProxNetChallenge.ProjectTests",
-      "projectPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
+      "projectPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\ProxNetChallenge.ProjectTests.csproj",
       "packagesPath": "C:\\Users\\npozharskyi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\obj\\",
+      "outputPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.ProjectTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

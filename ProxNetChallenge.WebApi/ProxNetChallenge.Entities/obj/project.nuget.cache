@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BprfiSS3n8ZIS6IfIXK3vdWyj3ElTgBbj9YQHecRdcEZirCPdMDdCd5abj1wTPDxWm5WBFIPBPIcBOXLwtcTUg==",
+  "dgSpecHash": "IIVLTSPJSe/T0ywLxOu28slGETq+mDAv/xnXRQa/qv736rKcnHxQiya/mthJWKLlaEYJiurTPfVHNjSTcxIYRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
+  "projectFilePath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNetChallenge.Entities\\ProxNetChallenge.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\npozharskyi\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\npozharskyi\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.4\\microsoft.dotnet.platformabstractions.2.0.4.nupkg.sha512",

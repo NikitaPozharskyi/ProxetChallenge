@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj": {}
+    "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj": {
+    "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj",
+        "projectUniqueName": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj",
         "projectName": "ProxNet.ProjectSettings",
-        "projectPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj",
+        "projectPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\ProxNet.ProjectSettings.csproj",
         "packagesPath": "C:\\Users\\npozharskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\npozharskyi\\source\\repos\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\obj\\",
+        "outputPath": "C:\\Users\\npozharskyi\\ProxetChallenge\\ProxetChallenge\\ProxNetChallenge.WebApi\\ProxNet.ProjectSettings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
