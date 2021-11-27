@@ -15,10 +15,5 @@ namespace ProxNetChallenge.Repository
         {
         }
 
-        public async Task<List<PlayerEntity>> GetPlayerListOrderebByDescending()
-        {
-            return await DbSet.OrderByDescending(entity => entity.WaitingTime).ToListAsync();
-        }
-
     }
 }

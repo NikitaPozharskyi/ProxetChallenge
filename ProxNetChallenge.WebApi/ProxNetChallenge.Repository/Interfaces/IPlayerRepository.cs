@@ -9,6 +9,5 @@ namespace ProxNetChallenge.Repository.Interfaces
 {
     public interface IPlayerRepository : IRepository<PlayerEntity, Guid>
     {
-        Task<List<PlayerEntity>> GetPlayerListOrderebByDescending();
     }
 }

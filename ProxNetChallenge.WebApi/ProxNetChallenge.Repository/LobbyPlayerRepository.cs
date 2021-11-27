@@ -17,6 +17,7 @@ namespace ProxNetChallenge.Repository
         {
             var lobbyPlayers = new List<LobbyPlayerEntity>();
             var players = await GetLobbyPlayersOrderebDyDecending();
+
             lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.First).Take(3));
             lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Second).Take(3));
             lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Third).Take(3));

@@ -52,6 +52,12 @@ namespace ProxNetChallenge.Repository
             return entity;
         }
 
+        public async Task<List<TEntity>> Find(Expression<Func<TEntity, bool>> predicate, int take, int skip = 0)
+        {
+            var entities = await DbSet.Where(predicate).Skip(skip).Take(take).ToListAsync();
+            return entities;
+        }
+
         public async Task<List<TEntity>> FindAll(Expression<Func<TEntity, bool>> predicate)
         {
             var entities = await DbSet.Where(predicate).ToListAsync();
