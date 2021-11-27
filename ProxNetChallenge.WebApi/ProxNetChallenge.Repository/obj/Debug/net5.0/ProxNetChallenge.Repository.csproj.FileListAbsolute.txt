@@ -1,0 +1,12 @@
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\bin\Debug\net5.0\ProxNetChallenge.Repository.deps.json
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\bin\Debug\net5.0\ProxNetChallenge.Repository.dll
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\bin\Debug\net5.0\ref\ProxNetChallenge.Repository.dll
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\bin\Debug\net5.0\ProxNetChallenge.Repository.pdb
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.csproj.AssemblyReference.cache
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.AssemblyInfoInputs.cache
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.AssemblyInfo.cs
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.csproj.CoreCompileInputs.cache
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.dll
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ref\ProxNetChallenge.Repository.dll
+C:\Users\npozharskyi\source\repos\ProxNetChallenge.WebApi\ProxNetChallenge.Repository\obj\Debug\net5.0\ProxNetChallenge.Repository.pdb
