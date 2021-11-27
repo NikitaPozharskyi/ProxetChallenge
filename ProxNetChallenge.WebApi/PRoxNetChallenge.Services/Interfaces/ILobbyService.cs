@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProxNetChallenge.Services.Interfaces
 {
-    interface ILobbyService
+    public interface ILobbyService
     {
         Task AddPlayerToLobby(Guid id);
     }
