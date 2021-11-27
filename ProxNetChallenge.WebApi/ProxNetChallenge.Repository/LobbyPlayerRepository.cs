@@ -14,7 +14,7 @@ namespace ProxNetChallenge.Repository
         public LobbyPlayerRepository(Context dbContext) : base(dbContext)
         {
         }
-        public async Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending() => await DbSet.OrderByDescending(player => player.IncomeDate).ToListAsync();
+        public async Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending() => await DbSet.OrderBy(player => player.IncomeDate).ToListAsync();
 
         
     }

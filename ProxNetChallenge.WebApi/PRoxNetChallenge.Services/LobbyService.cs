@@ -69,9 +69,9 @@ namespace ProxNetChallenge.Services
             var lobbyPlayers = new List<LobbyPlayerEntity>();
             var players = await _lobbyPlayerRepository.GetLobbyPlayersOrderebDyDecending();
 
-            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.First).Take(3));
-            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Second).Take(3));
-            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Third).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.First && player.IsTaken == false).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Second && player.IsTaken == false).Take(3));
+            lobbyPlayers.AddRange(players.Where(player => player.VehicleType == Vehicle.Third && player.IsTaken == false).Take(3));
 
             if (lobbyPlayers.Count < 9) return null;
 

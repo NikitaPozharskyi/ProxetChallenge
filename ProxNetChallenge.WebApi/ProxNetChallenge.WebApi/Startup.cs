@@ -9,6 +9,7 @@ using ProxNetChallenge.Repository;
 using ProxNetChallenge.Repository.Interfaces;
 using ProxNetChallenge.Services;
 using ProxNetChallenge.Services.Interfaces;
+using ProxNetChallenge.WebApi.Middlewares;
 
 namespace ProxNetChallenge.WebApi
 {
@@ -48,7 +49,7 @@ namespace ProxNetChallenge.WebApi
             }
 
             app.UseRouting();
-            
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
