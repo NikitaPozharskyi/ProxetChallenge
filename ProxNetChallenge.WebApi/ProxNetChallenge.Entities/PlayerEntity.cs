@@ -9,6 +9,5 @@ namespace ProxNetChallenge.Entities
         public string PlayerName { get; set; }
         public Vehicle VehicleType { get; set; }
         public int WaitingTime { get; set; }
-        public bool IsInGame { get; set; }
     }
 }
