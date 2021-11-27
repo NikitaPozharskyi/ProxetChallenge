@@ -1,0 +1,17 @@
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Services.deps.json
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Services.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ref\ProxNetChallenge.Services.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Services.pdb
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Entities.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Repository.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Entities.pdb
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\bin\Debug\net5.0\ProxNetChallenge.Repository.pdb
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.csproj.AssemblyReference.cache
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.AssemblyInfoInputs.cache
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.AssemblyInfo.cs
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.csproj.CoreCompileInputs.cache
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.csproj.CopyComplete
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ref\ProxNetChallenge.Services.dll
+C:\Users\npozharskyi\ProxetChallenge\ProxetChallenge\ProxNetChallenge.WebApi\PRoxNetChallenge.Services\obj\Debug\net5.0\ProxNetChallenge.Services.pdb

@@ -10,7 +10,7 @@ using ProxNetChallenge.Services.Interfaces;
 
 namespace ProxNetChallenge.Services
 {
-    public class LobbyService :ILobbyService
+    public class LobbyService : ILobbyService
     {
         private readonly IPlayerRepository _playerRepository;
         private readonly ILobbyPlayerRepository _lobbyPlayerRepository;
@@ -35,6 +35,36 @@ namespace ProxNetChallenge.Services
                 VehicleType = entity.VehicleType,
                 IncomeDate = DateTime.Now
             });
+        }
+
+        public async Task RemovePlayerFromLobby(Guid id)
+        {
+            var entity = await _lobbyPlayerRepository.GetByIdAsync(id);
+            await _lobbyPlayerRepository.DeleteAsync(entity);
+        }
+
+        public async Task RemovePlayerFromLobby(string name)
+        {
+            var entity = await _playerRepository.Find(player => player.PlayerName == name);
+            var lobbyPlayerEntity = await _lobbyPlayerRepository.GetByIdAsync(entity.Id);
+            await _lobbyPlayerRepository.DeleteAsync(lobbyPlayerEntity);
+        }
+
+        public async Task<(List<LobbyPlayerEntity>, List<LobbyPlayerEntity>)> GenerateTeams()
+        {
+            return await _lobbyPlayerRepository.GetTeams();
+        }
+
+        public async Task<List<PlayerEntity>> MapPlayers(List<LobbyPlayerEntity> players)
+        {
+            var playersEntityList = new List<PlayerEntity>();
+            foreach (var lobbyPlayerEntity in players)
+            {
+                var player = await _playerRepository.GetByIdAsync(lobbyPlayerEntity.PlayerId);
+                playersEntityList.Add(player);
+            }
+
+            return playersEntityList;
         }
     }
 }

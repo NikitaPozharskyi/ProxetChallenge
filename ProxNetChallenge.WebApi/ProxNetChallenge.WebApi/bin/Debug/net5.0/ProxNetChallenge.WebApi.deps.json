@@ -37,6 +37,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
           "ProxNet.ProjectSettings": "1.0.0",
           "ProxNetChallenge.Repository": "1.0.0",
+          "ProxNetChallenge.Services": "1.0.0",
+          "ProxNetChallenge.WebModels": "1.0.0",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "4.1.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -1548,10 +1550,23 @@
           "ProxNet.ProjectSettings.dll": {}
         }
       },
+      "ProxNetChallenge.Entities/1.0.0": {
+        "dependencies": {
+          "Serilog": "2.10.0",
+          "Serilog.AspNetCore": "4.1.0"
+        },
+        "runtime": {
+          "ProxNetChallenge.Entities.dll": {}
+        },
+        "compile": {
+          "ProxNetChallenge.Entities.dll": {}
+        }
+      },
       "ProxNetChallenge.Repository/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
+          "ProxNetChallenge.Entities": "1.0.0",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "4.1.0"
         },
@@ -1560,6 +1575,31 @@
         },
         "compile": {
           "ProxNetChallenge.Repository.dll": {}
+        }
+      },
+      "ProxNetChallenge.Services/1.0.0": {
+        "dependencies": {
+          "ProxNetChallenge.Entities": "1.0.0",
+          "ProxNetChallenge.Repository": "1.0.0",
+          "Serilog": "2.10.0",
+          "Serilog.AspNetCore": "4.1.0"
+        },
+        "runtime": {
+          "ProxNetChallenge.Services.dll": {}
+        },
+        "compile": {
+          "ProxNetChallenge.Services.dll": {}
+        }
+      },
+      "ProxNetChallenge.WebModels/1.0.0": {
+        "dependencies": {
+          "ProxNetChallenge.Entities": "1.0.0"
+        },
+        "runtime": {
+          "ProxNetChallenge.WebModels.dll": {}
+        },
+        "compile": {
+          "ProxNetChallenge.WebModels.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4059,7 +4099,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ProxNetChallenge.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ProxNetChallenge.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProxNetChallenge.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProxNetChallenge.WebModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

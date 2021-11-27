@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using ProxNetChallenge.Entities;
 using ProxNetChallenge.Entities.models;
@@ -54,6 +51,11 @@ namespace ProxNetChallenge.Services
         public async Task<PlayerEntity> GetPlayer(string playerName)
         {
             return await _playerRepository.Find(player => player.PlayerName == playerName);
+        }
+
+        public bool IsHealthy()
+        {
+            return _playerRepository.IsHealthy();
         }
     }
 }

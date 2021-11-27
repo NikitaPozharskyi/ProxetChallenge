@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ProxNetChallenge.Entities;
-using ProxNetChallenge.Models;
+using ProxNetChallenge.Entities.models;
 using ProxNetChallenge.Repository.Interfaces;
 
 namespace ProxNetChallenge.Repository
 {
     public class LobbyPlayerRepository : Repository<Context, LobbyPlayerEntity, Guid>, ILobbyPlayerRepository
     {
-        protected LobbyPlayerRepository(Context dbContext) : base(dbContext)
+        public LobbyPlayerRepository(Context dbContext) : base(dbContext)
         {
         }
         private async Task<List<LobbyPlayerEntity>> GenerateTeam()
@@ -29,7 +29,7 @@ namespace ProxNetChallenge.Repository
             return lobbyPlayers;
         }
 
-        private async Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending() => DbSet.OrderByDescending(player => player.IncomeDate).ToList();
+        public async Task<List<LobbyPlayerEntity>> GetLobbyPlayersOrderebDyDecending() => DbSet.OrderByDescending(player => player.IncomeDate).ToList();
 
         private async Task UpdateLobbyPlayerStatus(List<LobbyPlayerEntity> players)
         {
@@ -48,20 +48,6 @@ namespace ProxNetChallenge.Repository
 
                 await DeleteAsync(entity);
             }
-        }
-
-        public async Task<(List<LobbyPlayerEntity>, List<LobbyPlayerEntity>)> GetTeams()
-        {
-            var firstTeam = await GenerateTeam();
-            var secondTeam = await GenerateTeam();
-
-            if (firstTeam == null || secondTeam == null)
-                return (new List<LobbyPlayerEntity>(), new List<LobbyPlayerEntity>());
-
-            await RemoveFromLobby(firstTeam);
-            await RemoveFromLobby(secondTeam);
-
-            return (firstTeam, secondTeam);
         }
     }
 }

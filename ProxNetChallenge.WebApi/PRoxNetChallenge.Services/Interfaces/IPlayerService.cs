@@ -14,5 +14,7 @@ namespace ProxNetChallenge.Services.Interfaces
         Task<PlayerEntity> GetPlayer(Guid id);
         Task<PlayerEntity> GetPlayer(string playerName);
 
+        bool IsHealthy();
+
     }
 }

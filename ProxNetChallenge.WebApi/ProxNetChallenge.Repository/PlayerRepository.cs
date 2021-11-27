@@ -11,9 +11,13 @@ namespace ProxNetChallenge.Repository
 {
     public class PlayerRepository : Repository<Context,PlayerEntity, Guid>,IPlayerRepository
     {
-        protected PlayerRepository(Context dbContext) : base(dbContext)
+        public PlayerRepository(Context dbContext) : base(dbContext)
         {
         }
 
+        public bool IsHealthy()
+        {
+            return DbSet != null;
+        }
     }
 }

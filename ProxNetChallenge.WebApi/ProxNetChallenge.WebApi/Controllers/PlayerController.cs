@@ -6,6 +6,7 @@ using ProxNetChallenge.Services.Interfaces;
 
 namespace ProxNetChallenge.WebApi.Controllers
 {
+    [Route("api/v1/player")]
     public class PlayerController : Controller
     {
         private readonly IPlayerService _playerService;
@@ -22,8 +23,8 @@ namespace ProxNetChallenge.WebApi.Controllers
             return Ok(await _playerService.GetPlayer(id));
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetPlayer(string playerName)
+        [HttpGet("playerName")]
+        public async Task<IActionResult> GetPlayerByName(string playerName)
         {
             if (String.IsNullOrWhiteSpace(playerName)) return BadRequest(nameof(playerName));
             return Ok(await _playerService.GetPlayer(playerName));
@@ -45,8 +46,8 @@ namespace ProxNetChallenge.WebApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteUser(string playerName)
+        [HttpDelete("delete/Name")]
+        public async Task<IActionResult> DeleteUserByName(string playerName)
         {
             if (String.IsNullOrWhiteSpace(playerName)) return BadRequest(nameof(playerName));
             await _playerService.RemovePlayer(playerName);

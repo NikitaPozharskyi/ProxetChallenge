@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using ProxNetChallenge.Services.Interfaces;
 using ProxNetChallenge.WebModels;
@@ -7,19 +8,22 @@ namespace ProxNetChallenge.WebApi.Controllers
 {
     public class TeamsController : Controller
     {
-        private readonly ITeamService _teamService;
-
-        public TeamsController(ITeamService teamService)
+        private readonly ILobbyService _lobbyService;
+        public TeamsController(ILobbyService lobbyService)
         {
-            _teamService = teamService;
+            _lobbyService = lobbyService;
         }
 
-        public async Task<Teams> Generate()
+        [HttpGet]
+        public async Task<IActionResult> Generate()
         {
-            var (firstTeam, secondTeam) = await _teamService.GetTeamsToLobby();
-            var teams = new Teams {FirstTeam = firstTeam, SecondTeam = secondTeam};
-            return teams;
+            var (firstTeam, secondTeam) = await _lobbyService.GenerateTeams();
+            var mappedFirstTeam = await _lobbyService.MapPlayers(firstTeam);
+            var mappedSecondTeam = await _lobbyService.MapPlayers(secondTeam);
 
+            var teams = new PlayerTeamsModel { FirstTeam = mappedFirstTeam, SecondTeam = mappedSecondTeam };
+            return Ok(teams);
         }
+
     }
 }

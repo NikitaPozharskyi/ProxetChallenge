@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProxNet.ProjectSettings;
 using ProxNetChallenge.Repository;
+using ProxNetChallenge.Repository.Interfaces;
+using ProxNetChallenge.Services;
+using ProxNetChallenge.Services.Interfaces;
 
 namespace ProxNetChallenge.WebApi
 {
@@ -24,10 +27,16 @@ namespace ProxNetChallenge.WebApi
         {
             var dbConnectionString = Configuration["DbConnectString"];
             services.AddDbContext<Context>(options => options.UseSqlServer(dbConnectionString));
-            services.AddControllers();
+
+            services.AddScoped<IPlayerService, PlayerService>();
+            services.AddScoped<ILobbyService, LobbyService>();
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<ILobbyPlayerRepository, LobbyPlayerRepository>();
+
 
             services.Configure<Settings>(Configuration);
 
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,12 +48,11 @@ namespace ProxNetChallenge.WebApi
             }
 
             app.UseRouting();
+            
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "api/v1/{controller}");
+                endpoints.MapControllers();
             });
         }
     }

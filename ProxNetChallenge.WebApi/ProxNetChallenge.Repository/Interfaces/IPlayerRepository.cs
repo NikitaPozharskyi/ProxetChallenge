@@ -9,5 +9,6 @@ namespace ProxNetChallenge.Repository.Interfaces
 {
     public interface IPlayerRepository : IRepository<PlayerEntity, Guid>
     {
+        bool IsHealthy();
     }
 }

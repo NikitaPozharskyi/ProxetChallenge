@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
+          "ProxNetChallenge.Entities": "1.0.0",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "4.1.0"
         },
@@ -1149,6 +1150,15 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         }
+      },
+      "ProxNetChallenge.Entities/1.0.0": {
+        "dependencies": {
+          "Serilog": "2.10.0",
+          "Serilog.AspNetCore": "4.1.0"
+        },
+        "runtime": {
+          "ProxNetChallenge.Entities.dll": {}
+        }
       }
     }
   },
@@ -1955,6 +1965,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "ProxNetChallenge.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
